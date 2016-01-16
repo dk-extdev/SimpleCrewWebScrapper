@@ -1,0 +1,29 @@
+{
+	"name": "SimpleCrew Web Clipper", 
+	"version": "1", 
+	"manifest_version": 2, 
+	"icons": {
+		"48": "images/icon-48.png"
+  	},
+	"permissions": [
+		"tabs", 
+		"<all_urls>"
+	], 
+	"browser_action": {
+	    "default_title": "SimpleCrew Web Clipper", 
+	    "default_icon": "images/icon-48.png", 
+	    "default_popup": "popup/login.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css": ["css/style.css"],
+			"js": ["js/page_context.js", "js/screenshot.js", "js/contentScript.js"]
+    	}
+	], 
+	"background": {
+		"scripts": ["popup/js/lib/jquery-2.0.3.min.js", "popup/js/simplecrew.js", "eventPage.js"],
+		"persistent": false
+	}, 
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

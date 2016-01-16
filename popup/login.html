@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>SimpleCrew Web Clipper</title>
+	</head>
+	<body>
+		<div id="header" class="header" style="display: none;">
+			<img class="logo" src="/images/icon-48.png">
+			<div class="name">
+				<span class="bold">simplecrew</span>
+				<span>web clipper</span>
+			</div>
+			<div class='clear'></div>
+		</div>
+
+		<div id="spinner" class="page">
+			<img src="/images/spinner.gif">
+		</div>
+
+		<div id="error" class="page">
+		
+		</div>
+
+		<div id="loginPage" class="page">
+			<div id="formContainer">
+				<form id="loginForm">
+					<div class="form-control">
+						<label>Email</label>
+						<input class="username" type="text" name="email" />
+					</div>
+
+					<div class="form-control">
+						<label>Password</label>
+						<input class="password" type="password" name="password" />
+					</div>
+
+					<button class="btn btn-primary sign-in">Sign In</button>
+				</form>
+			</div>
+		</div>
+
+		<div id="submissionPage" class="page">
+			<form id="submissionForm">
+				<table style="width: 100%;">
+					<tr>
+						<td style="width: 75px;"><label>Company</label></td>
+						<td><select id="companies" name="company"></select></td>
+					</tr>
+
+					<tr>
+						<td><label>Campaign</label></td>
+						<td><select id="compaigns" name="compaigns"></select></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">
+							<label>Comment</label>
+							<textarea id="comment" style="margin-top: 6px;"></textarea>
+						</td>
+					</tr>
+				</table>
+
+				<button class="btn btn-primary submit">Next</button>
+			</form>
+
+			<a id="signout">Sign Out</a>
+		</div>
+
+		<script type="text/javascript" src="js/lib/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/simplecrew.js"></script>
+		<script type="text/javascript" src="js/popup.js"></script>
+	</body>
+</html>
